@@ -1,11 +1,15 @@
 import Head from 'next/head'
 import s from '@/styles/Home.module.scss'
+// components
+import Card from '@/components/card'
+import Breadcrumbs from '@/components/breadcrumbs'
 // link
 import Link from 'next/link'
 // imgs
 import Image from 'next/image'
 import Delete from "@/assets/img/Group 9.svg"
 import Arrow from "@/assets/img/arrowleft.svg"
+import Card_Photo from "@/assets/img/image 3.png"
 
 export default function Home() {
   return (
@@ -41,16 +45,23 @@ export default function Home() {
             <h2 className={s.wishlist__info_text}>Photo</h2>
             <h2 className={s.wishlist__info_text}>Product code</h2>
             <h2 className={s.wishlist__info_text}>Name</h2>
-            <h2 className={s.wishlist__info_text}></h2>
             <h2 className={s.wishlist__info_text}>Stock</h2>
             <h2 className={s.wishlist__info_text}>QTY</h2>
             <h2 className={s.wishlist__info_text}>Price</h2>
             <h2 className={s.wishlist__info_text}></h2>
             <h2 className={s.wishlist__info_text}>Switch</h2>
-            <h2 className={s.wishlist__info_text}>Photo</h2>
+            <h2 className={s.wishlist__info_text}>Image</h2>
           </div>
           <div className={s.wishlist__list}>
-
+            <Card img={Card_Photo} code={5894684854} description={"Power bank (UMB) XO PR156, 30000 mAh, 3USB + Type-C + Lighting, Quick Charge, Power Delivery, 22.5W, Black"} stock='NY' quantity={56} price={48}></Card>
+            <Card img={Card_Photo} code={5894684854} description={"Power bank (UMB) XO PR156, 30000 mAh, 3USB + Type-C + Lighting, Quick Charge, Power Delivery, 22.5W, Black"} stock='Washington' quantity={56} price={48}></Card>
+            <Card img={Card_Photo} code={5894684854} description={"Power bank (UMB) XO PR156, 30000 mAh, 3USB + Type-C + Lighting, Quick Charge, Power Delivery, 22.5W, Black"} stock='Kyiv' quantity={56} price={48}></Card>
+            <Card img={Card_Photo} code={5894684854} description={"Power bank (UMB) XO PR156, 30000 mAh, 3USB + Type-C + Lighting, Quick Charge, Power Delivery, 22.5W, Black"} stock='NY' quantity={56} price={48}></Card>
+            <Card img={Card_Photo} code={5894684854} description={"Power bank (UMB) XO PR156, 30000 mAh, 3USB + Type-C + Lighting, Quick Charge, Power Delivery, 22.5W, Black"} stock='Washington' quantity={56} price={48}></Card>
+            <Card img={Card_Photo} code={5894684854} description={"Power bank (UMB) XO PR156, 30000 mAh, 3USB + Type-C + Lighting, Quick Charge, Power Delivery, 22.5W, Black"} stock='Kyiv' quantity={56} price={48}></Card>
+            <Card img={Card_Photo} code={5894684854} description={"Power bank (UMB) XO PR156, 30000 mAh, 3USB + Type-C + Lighting, Quick Charge, Power Delivery, 22.5W, Black"} stock='NY' quantity={56} price={48}></Card>
+            <Card img={Card_Photo} code={5894684854} description={"Power bank (UMB) XO PR156, 30000 mAh, 3USB + Type-C + Lighting, Quick Charge, Power Delivery, 22.5W, Black"} stock='Washington' quantity={56} price={48}></Card>
+            <Card img={Card_Photo} code={5894684854} description={"Power bank (UMB) XO PR156, 30000 mAh, 3USB + Type-C + Lighting, Quick Charge, Power Delivery, 22.5W, Black"} stock='Kyiv' quantity={56} price={48}></Card>
           </div>
           <div className={s.wishlist__extra}>
             <div className={s.wishlist__extra_back}>
