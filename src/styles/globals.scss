@@ -1,0 +1,11 @@
+@import "./variables.scss";
+
+body {
+    margin: 0;
+    /* all pages color */
+    background-color: $--pages-color;
+}
+
+img {
+    user-select: none;
+}
