@@ -1,0 +1,28 @@
+@import "../../styles/variables.scss";
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    a {
+        display: flex;
+        align-items: center;
+    }
+    &__arrow {
+        margin-left: 14px;
+        width: 10;
+        height: 10;
+    }
+    &__link {
+        padding-top: 1.15px;
+        margin: 0;
+        margin-left: 8px;
+        color: $--secondary-font-color;
+        font-family: $--primary-font-family;
+        text-decoration: none;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+    }
+}
