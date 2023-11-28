@@ -40,6 +40,7 @@
             border: none;
             margin-right: 20px;
             cursor: pointer;
+            transition: 0.4s;
             &_text {
                 color: $--primary-font-color;
                 font-family: $--primary-font-family;
@@ -51,30 +52,14 @@
                 margin-right: 5px;
             }
             &_img {
-
+                
             }
-        }
-        &_category.active {
-            display: flex;
-            align-items: center;
-            padding: 4px 10px;
-            border-radius: 4px;
-            background: #B2BAC7;
-            border: none;
-            margin-right: 20px;
-            cursor: pointer;
-            &_text {
-                color: $--active-font-color;
-                font-family: $--primary-font-family;
-                font-size: 12px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 130%; /* 15.6px */
-                margin: 0;
-                margin-right: 5px;
-            }
-            &_img {
-
+            &:hover {
+                background: #B2BAC7;
+                & .wishlist__filter_category_text {
+                    color: $--active-font-color;
+                    font-family: $--primary-font-family;
+                }
             }
         }
         &_new {
@@ -267,6 +252,8 @@
                 background: #E9EBEF;
                 border: none;
                 cursor: pointer;
+                // Turning off hover on MOBILE version
+                pointer-events: none;
                 &_text {
                     color: $--primary-font-color;
                     font-family: $--primary-font-family;
@@ -277,9 +264,6 @@
                     margin: 0;
                     margin-right: 5px;
                 }
-                &_img {
-    
-                }
             }
             &.container {
                 width: max-content;
@@ -288,28 +272,6 @@
                 row-gap: 10px;
                 column-gap: 15px;
                 margin: 0;
-            }
-            &_category.active {
-                display: flex;
-                align-items: center;
-                padding: 4px 10px;
-                border-radius: 4px;
-                background: #B2BAC7;
-                border: none;
-                cursor: pointer;
-                &_text {
-                    color: $--active-font-color;
-                    font-family: $--primary-font-family;
-                    font-size: 12px;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: 130%; /* 15.6px */
-                    margin: 0;
-                    margin-right: 5px;
-                }
-                &_img {
-    
-                }
             }
             &_new {
                 display: flex;
