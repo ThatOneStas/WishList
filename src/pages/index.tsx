@@ -13,7 +13,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Link href={`/wishlist`}>Go to List</Link>
+        <section className={s.hero}>
+          <Link className={s.hero__link} href={`/wishlist`}>Go to List</Link>
+        </section>
       </main>
     </>
   )

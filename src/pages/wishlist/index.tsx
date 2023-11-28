@@ -26,44 +26,49 @@ const wishlist = () => {
           <h1 className={s.wishlist__title}>Wishlist</h1>
           <h2 className={s.wishlist__count}>158 products</h2> {/* use lenght of products list to display count of products */}
           <div className={s.wishlist__filter}>
-            <button className={`${s.wishlist__filter_category} ${s.active}`}>
-              <h2 className={s.wishlist__filter_category_text}>All products</h2>
-              <Image className={s.wishlist__filter_category_img} src={Delete} alt='delete-btn'></Image>
-            </button>
-            <button className={`${s.wishlist__filter_category}`}>
-              <h2 className={s.wishlist__filter_category_text}>Phones</h2>
-              <Image className={s.wishlist__filter_category_img} src={Delete} alt='delete-btn'></Image>
-            </button>
-            <button className={`${s.wishlist__filter_category}`}>
-              <h2 className={s.wishlist__filter_category_text}>Accessories</h2>
-              <Image className={s.wishlist__filter_category_img} src={Delete} alt='delete-btn'></Image>
-            </button>
+            <div className={`${s.wishlist__filter} ${s.container}`}>
+              <button className={`${s.wishlist__filter_category} ${s.active}`}>
+                <h2 className={s.wishlist__filter_category_text}>All products</h2>
+                <Image className={s.wishlist__filter_category_img} src={Delete} alt='delete-btn'></Image>
+              </button>
+              <button className={`${s.wishlist__filter_category}`}>
+                <h2 className={s.wishlist__filter_category_text}>Phones</h2>
+                <Image className={s.wishlist__filter_category_img} src={Delete} alt='delete-btn'></Image>
+              </button>
+              <button className={`${s.wishlist__filter_category}`}>
+                <h2 className={s.wishlist__filter_category_text}>Accessories</h2>
+                <Image className={s.wishlist__filter_category_img} src={Delete} alt='delete-btn'></Image>
+              </button>
+            </div>
             <button className={`${s.wishlist__filter_new}`}>
-              <h2 className={s.wishlist__filter_new_text}>New category</h2>
+              <h2 className={s.wishlist__filter_new_text}>New</h2>
             </button>
           </div>
           <div className={s.wishlist__info}>
             <h2 className={s.wishlist__info_text}>Photo</h2>
             <h2 className={s.wishlist__info_text}>Product code</h2>
             <h2 className={s.wishlist__info_text}>Name</h2>
+            <h2 className={s.wishlist__info_text}></h2>
             <h2 className={s.wishlist__info_text}>Stock</h2>
             <h2 className={s.wishlist__info_text}>QTY</h2>
             <h2 className={s.wishlist__info_text}>Price</h2>
             <h2 className={s.wishlist__info_text}></h2>
+            <div className={s.wishlist__info_switch}>
             <h2 className={s.wishlist__info_text}>Switch</h2>
-            <h2 className={s.wishlist__info_text}>Image</h2>
+            <h2 className={`${s.wishlist__info_text} ${s.switch}`}>Image</h2>
+            </div>
           </div>
           <div className={s.wishlist__list}>
             {/* using product list from server to display items */}
-            <Card img={Card_Photo} code={5894684854} description={"Power bank (UMB) XO PR156, 30000 mAh, 3USB + Type-C + Lighting, Quick Charge, Power Delivery, 22.5W, Black"} stock='NY' quantity={56} price={48}></Card>
-            <Card img={Card_Photo} code={5894684854} description={"Power bank (UMB) XO PR156, 30000 mAh, 3USB + Type-C + Lighting, Quick Charge, Power Delivery, 22.5W, Black"} stock='Washington' quantity={56} price={48}></Card>
-            <Card img={Card_Photo} code={5894684854} description={"Power bank (UMB) XO PR156, 30000 mAh, 3USB + Type-C + Lighting, Quick Charge, Power Delivery, 22.5W, Black"} stock='Kyiv' quantity={56} price={48}></Card>
-            <Card img={Card_Photo} code={5894684854} description={"Power bank (UMB) XO PR156, 30000 mAh, 3USB + Type-C + Lighting, Quick Charge, Power Delivery, 22.5W, Black"} stock='NY' quantity={56} price={48}></Card>
-            <Card img={Card_Photo} code={5894684854} description={"Power bank (UMB) XO PR156, 30000 mAh, 3USB + Type-C + Lighting, Quick Charge, Power Delivery, 22.5W, Black"} stock='Washington' quantity={56} price={48}></Card>
-            <Card img={Card_Photo} code={5894684854} description={"Power bank (UMB) XO PR156, 30000 mAh, 3USB + Type-C + Lighting, Quick Charge, Power Delivery, 22.5W, Black"} stock='Kyiv' quantity={56} price={48}></Card>
-            <Card img={Card_Photo} code={5894684854} description={"Power bank (UMB) XO PR156, 30000 mAh, 3USB + Type-C + Lighting, Quick Charge, Power Delivery, 22.5W, Black"} stock='NY' quantity={56} price={48}></Card>
-            <Card img={Card_Photo} code={5894684854} description={"Power bank (UMB) XO PR156, 30000 mAh, 3USB + Type-C + Lighting, Quick Charge, Power Delivery, 22.5W, Black"} stock='Washington' quantity={56} price={48}></Card>
-            <Card img={Card_Photo} code={5894684854} description={"Power bank (UMB) XO PR156, 30000 mAh, 3USB + Type-C + Lighting, Quick Charge, Power Delivery, 22.5W, Black"} stock='Kyiv' quantity={56} price={48}></Card>
+            <Card img={Card_Photo} code={5894684854} name={"Power bank (UMB) XO PR156, 30000 mAh, 3USB + Type-C + Lighting, Quick Charge, Power Delivery, 22.5W, Black"} stock='NY' quantity={56} price={48}></Card>
+            <Card img={Card_Photo} code={5894684854} name={"Power bank (UMB) XO PR156, 30000 mAh, 3USB + Type-C + Lighting, Quick Charge, Power Delivery, 22.5W, Black"} stock='Washington' quantity={56} price={48}></Card>
+            <Card img={Card_Photo} code={5894684854} name={"Power bank (UMB) XO PR156, 30000 mAh, 3USB + Type-C + Lighting, Quick Charge, Power Delivery, 22.5W, Black"} stock='Kyiv' quantity={56} price={48}></Card>
+            <Card img={Card_Photo} code={5894684854} name={"Power bank (UMB) XO PR156, 30000 mAh, 3USB + Type-C + Lighting, Quick Charge, Power Delivery, 22.5W, Black"} stock='NY' quantity={56} price={48}></Card>
+            <Card img={Card_Photo} code={5894684854} name={"Power bank (UMB) XO PR156, 30000 mAh, 3USB + Type-C + Lighting, Quick Charge, Power Delivery, 22.5W, Black"} stock='Washington' quantity={56} price={48}></Card>
+            <Card img={Card_Photo} code={5894684854} name={"Power bank (UMB) XO PR156, 30000 mAh, 3USB + Type-C + Lighting, Quick Charge, Power Delivery, 22.5W, Black"} stock='Kyiv' quantity={56} price={48}></Card>
+            <Card img={Card_Photo} code={5894684854} name={"Power bank (UMB) XO PR156, 30000 mAh, 3USB + Type-C + Lighting, Quick Charge, Power Delivery, 22.5W, Black"} stock='NY' quantity={56} price={48}></Card>
+            <Card img={Card_Photo} code={5894684854} name={"Power bank (UMB) XO PR156, 30000 mAh, 3USB + Type-C + Lighting, Quick Charge, Power Delivery, 22.5W, Black"} stock='Washington' quantity={56} price={48}></Card>
+            <Card img={Card_Photo} code={5894684854} name={"Power bank (UMB) XO PR156, 30000 mAh, 3USB + Type-C + Lighting, Quick Charge, Power Delivery, 22.5W, Black"} stock='Kyiv' quantity={56} price={48}></Card>
           </div>
           <div className={s.wishlist__extra}>
             <div className={s.wishlist__extra_back}>

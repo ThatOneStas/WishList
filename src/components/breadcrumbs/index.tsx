@@ -19,7 +19,7 @@ const breadcrumbs = () => {
     <div className={s.breadcrumbs}>
       <Link className={s.breadcrumbs__home}  href={"/"}><Image src={Home} alt='home-icon'></Image></Link>
       <Image className={s.breadcrumbs__arrow} src={Arrow} alt='arrow-icon'></Image>
-      <Link className={s.breadcrumbs__link} href={"/"}>Wishlist</Link>
+      <Link className={s.breadcrumbs__link} href={"/wishlist"}>Wishlist</Link>
     </div>
     </>
   )
