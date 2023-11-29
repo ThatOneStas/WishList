@@ -7,7 +7,7 @@ import Breadcrumbs from '@/components/breadcrumbs'
 import Link from 'next/link'
 // imgs
 import Image from 'next/image'
-import Delete from "@/assets/img/Group 9.svg"
+import Delete from "@/assets/img/Group 9 black.svg"
 import Arrow from "@/assets/img/arrowleft.svg"
 import Card_Photo from "@/assets/img/image 3.png"
 
@@ -27,35 +27,35 @@ const wishlist = () => {
           <h2 className={s.wishlist__count}>158 products</h2> {/* use lenght of products list to display count of products */}
           <div className={s.wishlist__filter}>
             <div className={`${s.wishlist__filter} ${s.container}`}>
-              <button className={`${s.wishlist__filter_category} ${s.active}`}>
-                <h2 className={s.wishlist__filter_category_text}>All products</h2>
-                <Image className={s.wishlist__filter_category_img} src={Delete} alt='delete-btn'></Image>
+              <button className={s.wishlist__filter_category}>
+                <h2>All products</h2>
+                <Image src={Delete} alt='delete-btn'></Image>
               </button>
-              <button className={`${s.wishlist__filter_category}`}>
-                <h2 className={s.wishlist__filter_category_text}>Phones</h2>
-                <Image className={s.wishlist__filter_category_img} src={Delete} alt='delete-btn'></Image>
+              <button className={s.wishlist__filter_category}>
+                <h2>Phones</h2>
+                <Image src={Delete} alt='delete-btn'></Image>
               </button>
-              <button className={`${s.wishlist__filter_category}`}>
-                <h2 className={s.wishlist__filter_category_text}>Accessories</h2>
-                <Image className={s.wishlist__filter_category_img} src={Delete} alt='delete-btn'></Image>
+              <button className={s.wishlist__filter_category}>
+                <h2>Accessories</h2>
+                <Image src={Delete} alt='delete-btn'></Image>
               </button>
             </div>
             <button className={`${s.wishlist__filter_new}`}>
-              <h2 className={s.wishlist__filter_new_text}>New</h2>
+              <h2>New</h2>
             </button>
           </div>
           <div className={s.wishlist__info}>
-            <h2 className={s.wishlist__info_text}>Photo</h2>
-            <h2 className={s.wishlist__info_text}>Product code</h2>
-            <h2 className={s.wishlist__info_text}>Name</h2>
-            <h2 className={s.wishlist__info_text}></h2>
-            <h2 className={s.wishlist__info_text}>Stock</h2>
-            <h2 className={s.wishlist__info_text}>QTY</h2>
-            <h2 className={s.wishlist__info_text}>Price</h2>
-            <h2 className={s.wishlist__info_text}></h2>
+            <h2>Photo</h2>
+            <h2>Product code</h2>
+            <h2>Name</h2>
+            <h2></h2>
+            <h2>Stock</h2>
+            <h2>QTY</h2>
+            <h2>Price</h2>
+            <h2></h2>
             <div className={s.wishlist__info_switch}>
-            <h2 className={s.wishlist__info_text}>Switch</h2>
-            <h2 className={`${s.wishlist__info_text} ${s.switch}`}>Image</h2>
+              <h2>Switch</h2>
+              <h2>Image</h2>
             </div>
           </div>
           <div className={s.wishlist__list}>
@@ -73,13 +73,13 @@ const wishlist = () => {
           <div className={s.wishlist__extra}>
             <div className={s.wishlist__extra_back}>
               <Image className={s.wishlist__extra_back_link_arrow} src={Arrow} alt='arrow'></Image>
-              <Link className={s.wishlist__extra_back_link} href={"/"}>Back</Link>
+              <Link href={"/"}>Back</Link>
             </div>
             <button className={`${s.wishlist__extra_btn}`}>
-              <h2 className={s.wishlist__extra_btn_text}>Add product</h2>
+              <h2>Add product</h2>
             </button>
             <button className={`${s.wishlist__extra_btn}`}>
-              <h2 className={s.wishlist__extra_btn_text}>Add to cart</h2>
+              <h2>Add to cart</h2>
             </button>
           </div>
         </section>

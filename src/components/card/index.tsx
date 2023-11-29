@@ -25,9 +25,9 @@ const card = ({img,code,name,stock,quantity,price}:Props) => {
       <h2 className={s.card__quantity}>{quantity} qty.</h2>
       <h2 className={s.card__price}>{price} €</h2>
       <button className={s.card__btn}>
-        <h2 className={s.card__btn_text}></h2>
+        <h2></h2>
       </button>
-      <div className={s.card__favourite}><Image className={s.card__favourite_img} src={Heart} alt='favourite'></Image></div>
+      <div className={s.card__favourite}><Image src={Heart} alt='favourite'></Image></div>
       <Image className={s.card__remove} src={Remove} alt='remove'></Image>
     </div>
     </>

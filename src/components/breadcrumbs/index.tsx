@@ -17,8 +17,6 @@ const breadcrumbs = () => {
       // deleting fist elemnt as it's empty
     )
   },[])
-  // path.push('Other link')
-  // console.log(path)
   return (
     <>
     <div className={s.breadcrumbs}>

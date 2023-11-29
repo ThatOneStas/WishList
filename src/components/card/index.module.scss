@@ -3,7 +3,7 @@
 .card {
     height: 110px;
     display: grid;
-    grid-template-columns: 1fr 0.8fr 5.87fr 0.8fr 0.8fr 1fr 0.88fr 0.4fr 0.22fr;
+    grid-template-columns: 1fr 0.8fr 5.97fr 0.8fr 0.8fr 1fr 0.88fr 0.4fr 0.22fr;
     grid-template-rows: 1fr;
     column-gap: 20px;
     border-radius: 2px;
@@ -66,7 +66,7 @@
         background: #FFF;
         transition: 0.4s;
         cursor: pointer;
-        &_text {
+        & h2 {
             color: $--accent-font-color;
             font-family: $--primary-font-family;
             font-size: 12px;
@@ -82,7 +82,7 @@
             border-radius: 4px;
             border: 1px solid $--accent-font-color;
             background: $--accent-font-color;
-            & .card__btn_text {
+            & h2 {
                 color: #FFF;
             }
         }
@@ -99,7 +99,7 @@
         border-radius: 45px;
         border: 1px solid #E9EBEF;
         background: #FFF;
-        &_img {
+        & img {
             width: 20px;
             height: 20px;
         }
@@ -222,7 +222,7 @@
             background: #FFF;
             transition: 0.4s;
             cursor: pointer;
-            &_text {
+            & h2 {
                 color: $--accent-font-color;
                 font-family: $--primary-font-family;
                 font-size: 12px;
@@ -238,7 +238,7 @@
                 border-radius: 4px;
                 border: 1px solid $--accent-font-color;
                 background: $--accent-font-color;
-                & .card__btn_text {
+                & h2 {
                     color: #FFF;
                 }
             }
@@ -255,7 +255,7 @@
             border-radius: 45px;
             border: 1px solid #E9EBEF;
             background: #FFF;
-            &_img {
+            & img {
                 width: 14px;
                 height: 14px;
             }
