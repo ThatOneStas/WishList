@@ -10,16 +10,30 @@ import Home from "@/assets/img/Home.svg"
 
 const breadcrumbs = () => {
   const router = useRouter()
+  // getting path, as list
   const path = useMemo(()=>{
-    return router.asPath
+    return (
+      router.pathname.split('/').slice(1)
+      // deleting fist elemnt as it's empty
+    )
   },[])
-  console.log(path)
+  // path.push('Other link')
+  // console.log(path)
   return (
     <>
     <div className={s.breadcrumbs}>
       <Link className={s.breadcrumbs__home}  href={"/"}><Image src={Home} alt='home-icon'></Image></Link>
-      <Image className={s.breadcrumbs__arrow} src={Arrow} alt='arrow-icon'></Image>
-      <Link className={s.breadcrumbs__link} href={"/wishlist"}>Wishlist</Link>
+      {
+        // if they exist, display them
+        path && path.map((item:string)=>{
+          return (
+            <li className={s.breadcrumbs}>
+              <Image className={s.breadcrumbs__arrow} src={Arrow} alt='arrow-icon'></Image>
+              <Link className={s.breadcrumbs__link} href={`/${item}`}>{item}</Link>
+            </li>
+          )
+        })
+      }
     </div>
     </>
   )
