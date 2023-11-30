@@ -26,7 +26,7 @@ const breadcrumbs = () => {
         path && path.map((item:string)=>{
           return (
             <li className={s.breadcrumbs}>
-              <Image className={s.breadcrumbs__arrow} src={Arrow} alt='arrow-icon'></Image>
+              <Image src={Arrow} alt='arrow-icon'></Image>
               <Link className={s.breadcrumbs__link} href={`/${item}`}>{item}</Link>
             </li>
           )

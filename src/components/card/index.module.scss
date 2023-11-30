@@ -1,121 +1,252 @@
 @import "../../styles/variables.scss";
 
-.card {
-    height: 110px;
-    display: grid;
-    grid-template-columns: 1fr 0.8fr 5.97fr 0.8fr 0.8fr 1fr 0.88fr 0.4fr 0.22fr;
-    grid-template-rows: 1fr;
-    column-gap: 20px;
-    border-radius: 2px;
-    background: #FFF;
-    align-items: center;
-    padding: 5px 10px;
-    box-sizing: border-box;
-    &__code {
-        color: $--primary-font-color;
-        text-align: center;
-        font-family: $--primary-font-family;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 130%; /* 15.6px */
-    }
-    &__name {
-        color: $--primary-font-color;
-        font-family: $--primary-font-family;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 130%; /* 15.6px */
-    }
-    &__stock {
-        color: $--primary-font-color;
-        text-align: center;
-        font-family: $--primary-font-family;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 130%; /* 15.6px */
-    }
-    &__quantity {
-        color: $--primary-font-color;
-        text-align: center;
-        font-family: $--primary-font-family;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 130%; /* 15.6px */
-    }
-    &__price {
-        color: $--primary-font-color;
-        text-align: center;
-        font-family: $--primary-font-family;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 110%; /* 15.4px */
-    }
-    &__btn {
-        display: flex;
-        padding: 9px 14px;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
+// FOR MONITORS
+@media (max-width: 2801px) {
+    .card {
+        height: 270px;
+        display: grid;
+        grid-template-columns: 1fr 0.8fr 5.97fr 0.8fr 0.8fr 1fr 0.88fr 0.4fr 0.22fr;
+        grid-template-rows: 1fr;
+        column-gap: 40px;
         border-radius: 4px;
-        border: 1px solid $--accent-font-color;
         background: #FFF;
-        transition: 0.4s;
-        cursor: pointer;
-        & h2 {
-            color: $--accent-font-color;
+        align-items: center;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        &__img {
+            width: 250px;
+            height: 250px;
+        }
+        &__code {
+            color: $--primary-font-color;
+            text-align: center;
+            font-family: $--primary-font-family;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%; /* 15.6px */
+        }
+        &__name {
+            color: $--primary-font-color;
+            font-family: $--primary-font-family;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 130%; /* 15.6px */
+        }
+        &__stock {
+            color: $--primary-font-color;
+            text-align: center;
+            font-family: $--primary-font-family;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%; /* 15.6px */
+        }
+        &__quantity {
+            color: $--primary-font-color;
+            text-align: center;
+            font-family: $--primary-font-family;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 130%; /* 15.6px */
+        }
+        &__price {
+            color: $--primary-font-color;
+            text-align: center;
+            font-family: $--primary-font-family;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 110%; /* 15.4px */
+        }
+        &__btn {
+            display: flex;
+            padding: 9px 14px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 4px;
+            border: 1px solid $--accent-font-color;
+            background: #FFF;
+            transition: 0.4s;
+            cursor: pointer;
+            & h2 {
+                color: $--accent-font-color;
+                font-family: $--primary-font-family;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 130%; /* 15.6px */
+                margin: 0;
+                &:before {
+                    content: 'Add to cart';
+                }
+            }
+            &:hover {
+                border-radius: 4px;
+                border: 1px solid $--accent-font-color;
+                background: $--accent-font-color;
+                & h2 {
+                    color: #FFF;
+                }
+            }
+        }
+        &__favourite {
+            cursor: pointer;
+            display: flex;
+            width: 60px;
+            height: 60px;
+            padding: 5px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 45px;
+            border: 1px solid #E9EBEF;
+            background: #FFF;
+            & img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+        &__remove {
+            display: flex;
+            width: 32px;
+            height: 32px;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+    }
+}
+
+// FOR NOTEBOOKS
+@media (max-width: 1601px) {
+    .card {
+        height: 110px;
+        display: grid;
+        grid-template-columns: 1fr 0.8fr 5.97fr 0.8fr 0.8fr 1fr 0.88fr 0.4fr 0.22fr;
+        grid-template-rows: 1fr;
+        column-gap: 20px;
+        border-radius: 2px;
+        background: #FFF;
+        align-items: center;
+        padding: 5px 10px;
+        box-sizing: border-box;
+        &__img {
+            width: 100px;
+            height: 100px;
+        }
+        &__code {
+            color: $--primary-font-color;
+            text-align: center;
+            font-family: $--primary-font-family;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%; /* 15.6px */
+        }
+        &__name {
+            color: $--primary-font-color;
             font-family: $--primary-font-family;
             font-size: 12px;
             font-style: normal;
             font-weight: 700;
             line-height: 130%; /* 15.6px */
-            margin: 0;
-            &:before {
-                content: 'Add to cart';
-            }
         }
-        &:hover {
+        &__stock {
+            color: $--primary-font-color;
+            text-align: center;
+            font-family: $--primary-font-family;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%; /* 15.6px */
+        }
+        &__quantity {
+            color: $--primary-font-color;
+            text-align: center;
+            font-family: $--primary-font-family;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 130%; /* 15.6px */
+        }
+        &__price {
+            color: $--primary-font-color;
+            text-align: center;
+            font-family: $--primary-font-family;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 110%; /* 15.4px */
+        }
+        &__btn {
+            display: flex;
+            padding: 9px 14px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
             border-radius: 4px;
             border: 1px solid $--accent-font-color;
-            background: $--accent-font-color;
+            background: #FFF;
+            transition: 0.4s;
+            cursor: pointer;
             & h2 {
-                color: #FFF;
+                color: $--accent-font-color;
+                font-family: $--primary-font-family;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 130%; /* 15.6px */
+                margin: 0;
+                &:before {
+                    content: 'Add to cart';
+                }
+            }
+            &:hover {
+                border-radius: 4px;
+                border: 1px solid $--accent-font-color;
+                background: $--accent-font-color;
+                & h2 {
+                    color: #FFF;
+                }
             }
         }
-    }
-    &__favourite {
-        cursor: pointer;
-        display: flex;
-        width: 30px;
-        height: 30px;
-        padding: 5px;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        border-radius: 45px;
-        border: 1px solid #E9EBEF;
-        background: #FFF;
-        & img {
-            width: 20px;
-            height: 20px;
+        &__favourite {
+            cursor: pointer;
+            display: flex;
+            width: 30px;
+            height: 30px;
+            padding: 5px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 45px;
+            border: 1px solid #E9EBEF;
+            background: #FFF;
+            & img {
+                width: 20px;
+                height: 20px;
+            }
         }
-    }
-    &__remove {
-        display: flex;
-        width: 16px;
-        height: 16px;
-        padding: 5px;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        cursor: pointer;
+        &__remove {
+            display: flex;
+            width: 16px;
+            height: 16px;
+            padding: 5px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
     }
 }
 
+// FOR PHONES (iPhone 12 Pro)
 @media (max-width: 391px) {
     .card {
         height: 110px;

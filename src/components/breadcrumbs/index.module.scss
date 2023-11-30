@@ -1,27 +1,100 @@
 @import "../../styles/variables.scss";
 
-.breadcrumbs {
-    display: flex;
-    align-items: center;
-    a {
+// FOR MONITORS
+@media (max-width: 2801px) {
+    .breadcrumbs {
         display: flex;
         align-items: center;
+        &__home img {
+            width: 30px;
+            height: 30px;
+        }
+        a {
+            display: flex;
+            align-items: center;
+        }
+        & li img {
+            margin-left: 28px;
+            width: 20px;
+            height: 20px;
+        }
+        &__link {
+            margin: 0;
+            margin-left: 16px;
+            color: $--secondary-font-color;
+            font-family: $--primary-font-family;
+            text-decoration: none;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-align: center;
+        }
     }
-    &__arrow {
-        margin-left: 14px;
-        width: 10;
-        height: 10;
+}
+
+// FOR NOTEBOOKS
+@media (max-width: 1601px) {
+    .breadcrumbs {
+        display: flex;
+        align-items: center;
+        &__home img {
+            width: 15px;
+            height: 15px;
+        }
+        a {
+            display: flex;
+            align-items: center;
+        }
+        & li img {
+            margin-left: 14px;
+            width: 10px;
+            height: 10px;
+        }
+        &__link {
+            margin: 0;
+            margin-left: 8px;
+            color: $--secondary-font-color;
+            font-family: $--primary-font-family;
+            text-decoration: none;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-align: center;
+        }
     }
-    &__link {
-        margin: 0;
-        margin-left: 8px;
-        color: $--secondary-font-color;
-        font-family: $--primary-font-family;
-        text-decoration: none;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        text-align: center;
+}
+
+// FOR PHONES (iPhone 12 Pro)
+@media (max-width: 391px) {
+    .breadcrumbs {
+        display: flex;
+        align-items: center;
+        &__home img {
+            width: 15px;
+            height: 15px;
+        }
+        a {
+            display: flex;
+            align-items: center;
+        }
+        & li img {
+            margin-left: 14px;
+            width: 10px;
+            height: 10px;
+        }
+        &__link {
+            margin: 0;
+            margin-left: 8px;
+            color: $--secondary-font-color;
+            font-family: $--primary-font-family;
+            text-decoration: none;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-align: center;
+        }
     }
 }
